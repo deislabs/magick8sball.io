@@ -1,0 +1,12 @@
+.tmp
+.idea
+.DS_Store
+.sass-cache/
+
+### Jekyll ###
+_site/
+_config_local.yml
+.jekyll-metadata
+
+### NPM ###
+node_modules/

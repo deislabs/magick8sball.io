@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="131px" viewBox="0 0 168 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>launch pad</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-800.000000, -593.000000)">
+            <g id="Hero-Area" transform="translate(-80.000000, 49.000000)">
+                <g id="launch-pad" transform="translate(880.000000, 545.000000)">
+                    <polygon id="Path-5" fill="#599CC2" points="0.42578125 112.204697 66.3187745 97.6601562 138.425781 112.204697 66.3187745 129.660156"></polygon>
+                    <polygon id="Path-12" stroke="#527795" stroke-width="2" fill="#669BBE" points="87.6835938 87.5175781 127 97 167 87.5175781 167 47 147 37 147 7 127.832031 0.37890625 107 7"></polygon>
+                    <path d="M94.2714844,39 L114.271484,39" id="Path-13" stroke="#497898" stroke-width="4" stroke-linecap="round"></path>
+                    <path d="M90.2714844,21 L120.271484,21" id="Path-13" stroke="#497898" stroke-width="4" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1023px" height="232px" viewBox="0 0 1023 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Sky</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-95.000000, -48.000000)" stroke="#277A9F">
+            <g id="Hero-Area" transform="translate(96.000000, 49.000000)">
+                <g id="Sky">
+                    <circle id="Oval-4" stroke-width="2" fill="#FFFFFF" opacity="0.670000017" cx="4" cy="46" r="4"></circle>
+                    <circle id="Oval-4" cx="26" cy="159" r="7"></circle>
+                    <circle id="Oval-4" stroke-width="2" fill="#FFFFFF" cx="322.5" cy="12.5" r="12.5"></circle>
+                    <circle id="Oval-4" fill="#EEF5F9" cx="424" cy="49" r="7"></circle>
+                    <circle id="Oval-4" stroke-width="2" fill="#FFFFFF" opacity="0.370640851" cx="969" cy="221" r="9"></circle>
+                    <circle id="Oval-4" stroke-width="3" fill="#FFFFFF" opacity="0.370640851" cx="1015" cy="157" r="5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
