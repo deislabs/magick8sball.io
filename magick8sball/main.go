@@ -9,7 +9,8 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	log.Fatal(http.ListenAndServe("127.0.0.1:8080", http.HandlerFunc(shakeThat)))
+	log.Println("Listening on port 8080")
+	log.Fatal(http.ListenAndServe("0.0.0.0:8080", http.HandlerFunc(shakeThat)))
 }
 
 func shakeThat(w http.ResponseWriter, r *http.Request) {
