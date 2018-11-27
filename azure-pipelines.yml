@@ -10,5 +10,11 @@ variables:
   registry: deislabs
 
 steps:
+- task: Docker@1
+  displayName: Login
+  inputs:
+    containerRegistryType: Container Registry
+    dockerRegistryEndpoint: deislabs-registry
+    command: login
 - script: REGISTRY=$(registry) make push
   displayName: 'Publish Docker Image'
