@@ -17,6 +17,7 @@ func shakeThat(w http.ResponseWriter, r *http.Request) {
 	i := rand.Intn(len(Replies))
 	reply := Replies[i]
 
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte(reply))
 }
