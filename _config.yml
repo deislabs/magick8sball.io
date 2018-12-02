@@ -8,6 +8,8 @@ url: "https://magick8sball.io" # the base hostname & protocol for your site
 twitter_username: helmpack
 github_username:  deislabs
 
+magick8sball_url: https://api.magick8sball.io
+
 # Build settings
 markdown: kramdown
 include: ['.htaccess']

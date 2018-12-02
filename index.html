@@ -30,7 +30,7 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
   </div>
 
   <script type="text/javascript">
-    fetch("http://api.magick8sball.io")
+    fetch("{{ site.magick8sball_url }}")
     .then((resp) => resp.text())
     .then(function(data) {
       document.getElementById('magic-result').innerHTML = data

@@ -1,0 +1,10 @@
+http://localhost {
+  tls off
+  proxy /api api:8080
+  log stdout
+}
+
+https://api.magick8sball.io {
+  tls carolyn.vanslyck@microsoft.com
+  proxy / localhost:8080
+}
