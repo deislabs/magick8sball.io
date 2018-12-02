@@ -11,4 +11,4 @@ github_username:  deislabs
 # Build settings
 markdown: kramdown
 include: ['.htaccess']
-exclude: [docs, vendor, script, node_modules, Gruntfile.js, Gemfile, Gemfile.lock, package.json, s3_website.yml, gulpfile.js, README.md, Dockerfile, Makefile]
+exclude: [docs, vendor, script, node_modules, Gruntfile.js, Gemfile, Gemfile.lock, package.json, s3_website.yml, gulpfile.js, README.md, Dockerfile, Makefile, magick8sball]
