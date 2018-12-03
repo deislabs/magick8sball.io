@@ -2,29 +2,24 @@ REGISTRY ?= $(USER)
 IMAGE ?= magick8sball
 TAG ?= latest
 
-build:
+build: jekyll-build
 	docker build -t $(REGISTRY)/$(IMAGE):$(TAG) ./magick8sball
+	docker build -t $(REGISTRY)/$(IMAGE).io:$(TAG) .
 
 push: build
 	docker push $(REGISTRY)/$(IMAGE):$(TAG)
+	docker push $(REGISTRY)/$(IMAGE).io:$(TAG)
 
 run:
-	@echo "Use curl http://localhost to shake the magick8sball"
-	docker run -it --rm -p 8080:8080 $(REGISTRY)/$(IMAGE):$(TAG)
+	@echo "Go to http://localhost and shake the magick8sball"
+	REGISTRY=$(REGISTRY) IMAGE=$(IMAGE) TAG=$(TAG) docker-compose up
 
-caddy:
-	docker run --rm -it --name caddy \
-	  -p 80:80 \
-	  -v `pwd`/magick8sball/Caddyfile:/etc/Caddyfile \
-	  -v `pwd`/.caddy:/root/.caddy \
-	  abiosoft/caddy
-
-serve:
+jekyll-build:
 	docker run --rm -it --name jekyll \
 		-p 4000:4000 \
 		-v `pwd`:/srv/jekyll \
 		-v `pwd`/vendor/bundle:/usr/local/bundle \
-		jekyll/jekyll jekyll serve --config _config.yml,_config.dev.yml
+		jekyll/jekyll jekyll build
 
 deploy:
-	az container create -g magick8sball --name magick8sball --image $(REGISTRY)/$(IMAGE):$(TAG) --cpu 1 --memory 1 --dns-name-label magick8sball --ports 80
+	az group deployment create -g magick8sball --template-file aci.json

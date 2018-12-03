@@ -5,10 +5,10 @@ description: > # this means to ignore newlines until "baseurl:"
   magick8sball.io
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://magick8sball.io" # the base hostname & protocol for your site
-twitter_username: helmpack
+twitter_username: deislabs
 github_username:  deislabs
 
-magick8sball_url: https://api.magick8sball.io
+magick8sball_url: /api
 
 # Build settings
 markdown: kramdown
