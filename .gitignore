@@ -7,6 +7,10 @@
 _site/
 _config_local.yml
 .jekyll-metadata
+/vendor
 
 ### NPM ###
 node_modules/
+
+### GO ###
+/magick8sball/.caddy/

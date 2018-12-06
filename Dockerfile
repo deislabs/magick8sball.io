@@ -1,3 +1,4 @@
-FROM jekyll/jekyll
+FROM abiosoft/caddy:latest
 
-CMD ["jekyll", "serve", "--force_polling", "-s", "/home/site/wwwroot"]
+COPY _site/ /srv
+COPY Caddyfile /etc/Caddyfile

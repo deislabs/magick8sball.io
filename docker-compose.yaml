@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    image: ${REGISTRY}/${IMAGE}.io:latest
+    ports:
+      - "80:80"
+    networks:
+      - magick8sball
+  api:
+    image: ${REGISTRY}/${IMAGE}:${TAG}
+    ports:
+      - "8080:8080"
+    networks:
+      - magick8sball
+networks:
+  magick8sball:

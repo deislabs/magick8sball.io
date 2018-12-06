@@ -29,6 +29,14 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
     <h2>What wonder lies within?</h2>
   </div>
 
+  <script type="text/javascript">
+    fetch("{{ site.magick8sball_url }}")
+    .then((resp) => resp.text())
+    .then(function(data) {
+      document.getElementById('magic-result').innerHTML = data
+    })
+    </script>
+  <div id="magic-result"/>
 </section>
 
 <article id="info" class="content feature-main">

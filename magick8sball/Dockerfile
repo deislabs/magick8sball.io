@@ -1,6 +1,6 @@
 FROM golang:1.11-alpine
 
-EXPOSE 80
+EXPOSE 8080
 ENV GO111MODULE=on
 WORKDIR /go/src/magick8sball
 COPY . .
