@@ -25,29 +25,26 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
 
   <div class="titles" style="transform: translateY(-10%);
   margin-top: 100px;">
-    <h1>Magic Kubernetes Ball</h1>
-    <h2>What wonder lies within?</h2>
+    <h1>Magic k8s Ball</h1>
+    <h2>Shake me for kubernetes troubleshooting tips</h2>
   </div>
 
   <script type="text/javascript">
     fetch("{{ site.magick8sball_url }}")
-    .then((resp) => resp.text())
+    .then((resp) => resp.json())
     .then(function(data) {
-      document.getElementById('magic-result').innerHTML = data
+      document.getElementById('magic-tip').innerHTML = data['tip'];
+      document.getElementById('magic-description').innerHTML = data['description'];
     })
-    </script>
-  <div id="magic-result"/>
+  </script>
+  <div id="magic-tip"></div>
+  <div id="magic-description"></div>
 </section>
 
 <article id="info" class="content feature-main">
   <div class="row">
     <div class="small-10 medium-7 small-centered columns" id="whats-draft">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-12 small-centered center columns">
-      <a href="https://github.com/deislabs/magick8sball" title="Magic Kubernetes Ball" class="button round secondary">Call to Action</a>
+      <p>Can’t figure out what’s wrong with your k8s app? Need some ideas to jump start your debugging process? Shake things up with our Magic k8s ball!</p>
     </div>
   </div>
 </article>
@@ -56,15 +53,12 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
   <div class="row">
     <div class="small-10 small-centered medium-uncentered medium-5 columns">
       <p><a href="https://microsoft.com" title="Made by Microsoft"><img src="assets/images/microsoft.png" alt="Made by Microsoft" style="width: 150px;" /></a></p>
-      <p>Draft is made by some of the same fine people who brought you <a href="https://github.com/kubernetes/helm">Helm</a> - the package manager for <a href="https://kubernetes.io">Kubernetes</a>.</p>
-
-      <p class="hidden-for-small-only">You can find us on <a href="https://kubernetes.slack.com/messages/draft-users">Slack</a>, or discussing best practices in the <a href="https://github.com/kubernetes/community/blob/master/sig-apps/README.md">weekly SIG-Apps</a> community call. We'd love to hear any feedback or questions you may have.</p>
+      Know something we don’t? Share your tips with the community by submitting a <a href="https://github.com/deislabs/magick8sball.io">pull request</a>.
     </div>
     <div class="small-10 small-centered medium-uncentered medium-5 medium-offset-1 columns">
       <ul class="list">
-        <li><a href="https://github.com/azure/draft">Github</a></li>
-        <li><a href="https://twitter.com/helmpack">Twitter</a></li>
-        <li><a href="https://kubernetes.slack.com/messages/draft-users">Slack</a></li>
+        <li><a href="https://github.com/deislabs/magick8sball.io">Github</a></li>
+        <li><a href="https://twitter.com/deislabs">Twitter</a></li>
       </ul>
     </div>
   </div>

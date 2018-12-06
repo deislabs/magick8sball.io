@@ -1,0 +1,4 @@
+http://localhost {
+  tls off
+  proxy /api api:8080
+}

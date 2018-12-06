@@ -15,11 +15,18 @@ run:
 	REGISTRY=$(REGISTRY) IMAGE=$(IMAGE) TAG=$(TAG) docker-compose up
 
 jekyll-build:
-	docker run --rm -it --name jekyll \
+	docker run --rm \
 		-p 4000:4000 \
 		-v `pwd`:/srv/jekyll \
 		-v `pwd`/vendor/bundle:/usr/local/bundle \
 		jekyll/jekyll jekyll build
+
+jekyll-watch:
+	docker run -d \
+		-p 4000:4000 \
+		-v `pwd`:/srv/jekyll \
+		-v `pwd`/vendor/bundle:/usr/local/bundle \
+		jekyll/jekyll jekyll serve
 
 deploy:
 	az group deployment create -g magick8sball --template-file aci.json
