@@ -10,11 +10,15 @@ variables:
   registry: deislabs
 
 steps:
+- script: REGISTRY=$(registry) make build
+  displayName: 'Build Docker Images'
 - task: Docker@1
   displayName: Login
   inputs:
     containerRegistryType: Container Registry
     dockerRegistryEndpoint: deislabs-registry
     command: login
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
 - script: REGISTRY=$(registry) make push
-  displayName: 'Publish Docker Image'
+  displayName: 'Publish Docker Images'
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))

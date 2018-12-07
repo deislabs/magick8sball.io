@@ -1,6 +1,4 @@
-http://localhost,
 http://magick8sball.eastus.azurecontainer.io:80,
-http://api.magick8sball.io:80,
 http://magick8sball.io:80 {
   tls off
   proxy /api localhost:8080

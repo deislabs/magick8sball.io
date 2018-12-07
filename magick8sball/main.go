@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"math/rand"
 	"net/http"
@@ -14,10 +15,16 @@ func main() {
 }
 
 func shakeThat(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	i := rand.Intn(len(Replies))
 	reply := Replies[i]
+	bytes, err := json.Marshal(reply)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		return
+	}
 
-	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(reply))
+	w.Write(bytes)
 }

@@ -6,6 +6,9 @@ services:
       - "80:80"
     networks:
       - magick8sball
+    volumes:
+      - ${PWD}/_site:/srv
+      - ${PWD}/Caddyfile.dev:/etc/Caddyfile
   api:
     image: ${REGISTRY}/${IMAGE}:${TAG}
     ports:
