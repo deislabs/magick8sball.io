@@ -15,6 +15,8 @@ run:
 	REGISTRY=$(REGISTRY) IMAGE=$(IMAGE) TAG=$(TAG) docker-compose up
 
 jekyll-build:
+	mkdir -p _site/
+	mkdir -p vendor/bundle/
 	docker run --rm \
 		-p 4000:4000 \
 		-v `pwd`:/srv/jekyll \
