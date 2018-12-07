@@ -1,0 +1,80 @@
+#magic {
+  width: 50vw;
+  height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  color: #000;
+
+  align-items: center;
+  flex-direction: column;
+}
+
+#ball {
+  background-color: #090909;
+  width: 40vmin;
+  height: 40vmin;
+  border-radius: 50%;
+  /*box-shadow: inset -3vmin -3vmin 4vmin rgba(0, 0, 0, 0.35),
+    inset 1.5vmin 1.5vmin 8vmin rgba(50, 50, 50, 0.55),
+    14vmin 50vmin 14vmin rgba(0,0,0,0.90);*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ball #display {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none;
+
+  animation-delay: 0.1s;
+  background-color: #eee;
+  width: 18vmin;
+  height: 18vmin;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 1.5vmin 1.5vmin 1.5vmin rgba(55, 55, 55, 0.75);
+}
+
+#magic-tip {
+  font-size: 2vmin;
+  text-align: center;
+}
+
+#magic-description {
+  margin: 3vmin;
+}
+
+.eight{
+  font-size: 12vmin;
+}
+@keyframes shake {
+  0%{ transform: rotate(1deg) translate(3px,4px);}
+  5%{ transform: rotate(2deg) translate(-4px,-1px);}
+  10%{ transform: rotate(0deg) translate(0px,-5px);}
+  15%{ transform: rotate(2deg) translate(4px,0px);}
+  20%{ transform: rotate(1deg) translate(-3px,3px);}
+  25%{ transform: rotate(4deg) translate(4px,-3px);}
+  30%{ transform: rotate(1deg) translate(3px,-5px);}
+  35%{ transform: rotate(-2deg) translate(3px,4px);}
+  40%{ transform: rotate(0deg) translate(-3px,-3px);}
+  45%{ transform: rotate(-1deg) translate(4px,4px);}
+  50%{ transform: rotate(1deg) translate(-4px,3px);}
+  55%{ transform: rotate(2deg) translate(-4px,-1px);}
+  60%{ transform: rotate(0deg) translate(0px,-5px);}
+  65%{ transform: rotate(2deg) translate(4px,0px);}
+  70%{ transform: rotate(1deg) translate(-3px,3px);}
+  75%{ transform: rotate(4deg) translate(4px,-3px);}
+  80%{ transform: rotate(1deg) translate(3px,-5px);}
+  85%{ transform: rotate(1deg) translate(1px, -2px);}
+  100%{ transform: rotate(0deg) translate(0px, 0px);}
+}
+.shake {
+   animation: shake 1s ease-out 1;
+}

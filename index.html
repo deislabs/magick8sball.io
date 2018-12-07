@@ -29,16 +29,31 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
     <h2>Shake me for kubernetes troubleshooting tips</h2>
   </div>
 
-  <script type="text/javascript">
-    fetch("{{ site.magick8sball_url }}")
-    .then((resp) => resp.json())
-    .then(function(data) {
-      document.getElementById('magic-tip').innerHTML = data['tip'];
-      document.getElementById('magic-description').innerHTML = data['description'];
-    })
-  </script>
-  <div id="magic-tip"></div>
-  <div id="magic-description"></div>
+  <div id="magic">
+    <div id="ball">
+      <div id="display">
+        <div id="magic-tip"><span class="eight">8</span></div>
+      </div>
+    </div>
+    <div id="magic-description"></div>
+    <script type="text/javascript">
+      document.getElementById('ball').addEventListener('click', function () {
+        var ball = document.getElementById('ball');
+        ball.classList.add('shake');
+        ball.addEventListener('animationend',function(){
+          ball.classList.remove('shake');
+        });
+
+        fetch("{{ site.magick8sball_url }}")
+        .then((resp) => resp.json())
+        .then(function(data) {
+          document.getElementById('magic-tip').innerHTML = data['tip'];
+          document.getElementById('magic-description').innerHTML = data['description'];
+        });
+      });
+    </script>
+  </div>
+
 </section>
 
 <article id="info" class="content feature-main">
