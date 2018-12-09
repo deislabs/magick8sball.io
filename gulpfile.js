@@ -6,7 +6,7 @@
 // Load plugins
 var gulp = require('gulp'),
   del = require('del');
-  sass = require('gulp-ruby-sass'),
+  sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   uncss = require('gulp-uncss'),
   cache = require('gulp-cache'),
@@ -27,7 +27,8 @@ var gulp = require('gulp'),
 
 // Styles
 gulp.task('styles', function () {
-  return sass('assets/scss/app.scss', {style: 'compressed'})
+  return gulp.src('assets/scss/app.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 version'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
