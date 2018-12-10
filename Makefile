@@ -6,9 +6,12 @@ build: jekyll-build
 	docker build -t $(REGISTRY)/$(IMAGE):$(TAG) ./magick8sball
 	docker build -t $(REGISTRY)/$(IMAGE).io:$(TAG) .
 
-push: build
-	docker push $(REGISTRY)/$(IMAGE):$(TAG)
-	docker push $(REGISTRY)/$(IMAGE).io:$(TAG)
+push: push-docker
+	$(MAKE) REGISTRY=deislabs push-docker
+
+push-docker: build
+		docker push $(REGISTRY)/$(IMAGE):$(TAG)
+		docker push $(REGISTRY)/$(IMAGE).io:$(TAG)
 
 run:
 	@echo "Go to http://localhost and shake the magick8sball"
@@ -31,4 +34,5 @@ jekyll-watch:
 		jekyll/jekyll jekyll serve
 
 deploy:
+	az group deployment create -g magick8sball --template-file aci-hack.json
 	az group deployment create -g magick8sball --template-file aci.json
