@@ -85,18 +85,6 @@ gulp.task('images', function () {
   )
 });
 
-// Scripts
-gulp.task('scripts', function () {
-  return gulp.src('assets/draft-animation.hyperesources/draftanimation_hype_generated_script.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/draft-animation.hyperesources/'))
-    .pipe(gulp.dest('_site/assets/draft-animation.hyperesources/'))
-    .pipe(notify({message: 'Script minify complete'}));
-});
-
 
 // Clean
 gulp.task('clean', function () {
@@ -105,12 +93,13 @@ gulp.task('clean', function () {
 
 
 // Default task
-gulp.task('default', function () {
+gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    'styles', 'images', 'scripts',
+    'styles', 'images',
     'styles-uncss',
-    'styles-inline');
+    'styles-inline',
+    callback);
 });
 
 // Watch task
@@ -121,9 +110,6 @@ gulp.task('watch', function () {
 
   // Watch image files
   gulp.watch('images/**/*.{png,gif,jpg}', ['images']);
-
-  // Watch .js files
-  gulp.watch('assets/draft-animation.hyperesources/', ['scripts']);
 
   // Create LiveReload server
   livereload.listen();

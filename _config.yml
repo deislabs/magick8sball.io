@@ -1,8 +1,8 @@
 # Site settings
-title: "magick8sball.io"
+title: "✨ The Magic K8s Ball ✨"
 email: "roflynnc@microsoft.com"
 description: > # this means to ignore newlines until "baseurl:"
-  magick8sball.io
+  "Shake me for Kubernetes troubleshooting tips."
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://magick8sball.io" # the base hostname & protocol for your site
 twitter_username: deislabs
