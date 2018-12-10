@@ -93,12 +93,13 @@ gulp.task('clean', function () {
 
 
 // Default task
-gulp.task('default', function () {
+gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    'styles', 'images', 'scripts',
+    'styles', 'images',
     'styles-uncss',
-    'styles-inline');
+    'styles-inline',
+    callback);
 });
 
 // Watch task
