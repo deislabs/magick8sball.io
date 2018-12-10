@@ -12,20 +12,10 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
   </div>
 </div>
 
-<nav id="topbar">
-  <div class="row">
-    <!-- <h1 class="logo small-4 medium-2 columns">magick8sball</h1> -->
-    <!-- <ul class="inline-list right medium-6 medium-offset-4 columns">
-      <li><a href="https://github.com/deislabs/" title="Deis Labs">deislabs</a></li>
-    </ul> -->
-  </div>
-</nav>
-
-<section id="hero" class="draft-intro" style="min-height: 540px;">
+<section id="hero" class="draft-intro" style="min-height: 100%;">
 
   <div class="titles" style="transform: translateY(-10%);
-  margin-top: 100px;">
-    <h1>Magic k8s Ball</h1>
+  margin-top: 30px;">
     <h2>Shake me for kubernetes troubleshooting tips</h2>
   </div>
 
@@ -60,6 +50,41 @@ keywords: Magic,Kubernetes,Ball,Mystery,Swag,Commands,Guide,Random,Tips,Appendix
   <div class="row">
     <div class="small-10 medium-7 small-centered columns" id="whats-draft">
       <p>Can’t figure out what’s wrong with your k8s app? Need some ideas to jump start your debugging process? Shake things up with our Magic k8s ball!</p>
+
+      <h3>Glossary</h3>
+
+      <dl>
+        <dt>kubectl get cs</dt>
+        <dd>Check the current status of the Kubernetes control-plane components.</dd>
+        <dt>kubectl explain</dt>
+        <dd>
+          List the fields for supported resources. Eg. <code>kubectl explain pods</code>,  <code>kubectl explain pods.spec.containers</code>
+        </dd>
+        <dt>kubectl api-resources</dt>
+        <dd>Print the supported API resources on the server</dd>
+        <dt>kubectl get ev -w</dt>
+        <dd>Watch all events in a given namespaces</dd>
+        <dt>kubectl logs –f</dt>
+        <dd>Follow the logs for a specific container in a pod</dd>
+        <dt>kubectl get po -o wide</dt>
+        <dd>Print the list of pods in the current namespace with additional fields</dd>
+        <dt>kubectl version</dt>
+        <dd>Print the current client and server Kubernetes version</dd>
+        <dt>kubectl scale</dt>
+        <dd>Scale the number of replicas for the specified deployment</dd>
+        <dt>kubectl run</dt>
+        <dd>Create and run a particular image, possibly replicated. Creates a deployment or job to manage the created container(s).</dd>
+        <dt>kubectl port- forward</dt>
+        <dd>Forward one or more local ports to a pod.</dd>
+        <dt>kubectl exec</dt>
+        <dd>Execute a command in a container.</dd>
+        <dt>kubectl describe</dt>
+        <dd>Show details of a specific resource or group of resources.</dd>
+        <dt>kubectl proxy</dt>
+        <dd>Creates a proxy server or application-level gateway between localhost and the Kubernetes API Server. It also allows serving static content over specified HTTP path. All incoming data enters through one port and gets forwarded to the remote kubernetes API Server port, except for the path matching the static content path.</dd>
+        <dt>kubectl config view</dt>
+        <dd>Display merged kubeconfig settings or a specified kubeconfig file.</dd>
+      </dl>
     </div>
   </div>
 </article>
