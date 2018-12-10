@@ -409,6 +409,45 @@ small {
     }
   }
 
+  dl {
+    display: table;
+  
+    dt {
+      color: white;
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      font-family: $klinic;
+      display: inline-block;
+      width: 25%;
+      margin: .5rem 2.5% 2rem 0;
+      vertical-align: top;
+      padding-top: 0.5rem;
+      border-top: 1px solid darken($bluem, 5%);
+    }
+  
+    dd {
+      display: inline-block;
+      width: 70.5%;
+      margin: .5rem 0 2rem 0;
+      clear: both;
+      min-height: 2rem;
+      vertical-align: top;
+      padding-top: 0.825rem;
+      font-size: 1.125rem;
+      border-top: 1px solid darken($bluem, 5%);
+  
+      code {
+        background: darken($bluem, 3.5%);
+        font-size: 0.95rem;
+      }
+  
+      &:after {
+        clear: both;
+      }
+  
+    }
+  }
+
   img {
     min-width: 90%;
     height: auto;
@@ -474,39 +513,6 @@ small {
     margin: 4rem 0 2.5rem;
     line-height: 1.15;
     text-align: center;
-  }
-}
-
-dl {
-  display: table;
-
-  dt {
-    color: white;
-    font-size: 1.35rem;
-    letter-spacing: 0.05em;
-    font-family: $klinic;
-    display: inline-block;
-    width: 25%;
-    margin: .5rem 2.5% 2rem 0;
-    vertical-align: top;
-    padding-top: 0.5rem;
-    border-top: 1px solid darken($bluem, 5%);
-  }
-
-  dd {
-    display: inline-block;
-    width: 70.5%;
-    margin: .5rem 0 2rem 0;
-    clear: both;
-    min-height: 2rem;
-    vertical-align: top;
-    padding-top: 0.825rem;
-    border-top: 1px solid darken($bluem, 5%);
-
-    &:after {
-      clear: both;
-    }
-
   }
 }
 
