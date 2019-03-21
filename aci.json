@@ -47,7 +47,7 @@
         "osType": "Linux",
         "ipAddress": {
           "type": "Public",
-          "dnsNameLabel": "magick8sball",
+          "dnsNameLabel": "magick8sballio",
           "ports": [
             {
               "protocol": "tcp",
