@@ -52,7 +52,7 @@ gulp.task('styles-uncss', function () {
 });
 
 // Inline Critical CSS
-gulp.task('styles-inline', function (cb) {
+gulp.task('styles-inline', done => {
   critical.generate({
     base: '_site/',
     src: 'index.html',
@@ -71,7 +71,8 @@ gulp.task('styles-inline', function (cb) {
     minify: true,
     extract: false,
     ignore: ['font-face']
-  })
+  });
+  done();
 });
 
 // Images
@@ -93,23 +94,16 @@ gulp.task('clean', function () {
 
 
 // Default task
-gulp.task('default', function(callback) {
-  runSequence(
-    'clean',
-    'styles', 'images',
-    'styles-uncss',
-    'styles-inline',
-    callback);
-});
+gulp.task('default', gulp.series('clean', 'styles', 'images', 'styles-uncss', 'styles-inline'), function() { });
 
 // Watch task
 gulp.task('watch', function () {
 
   // Watch .scss files
-  gulp.watch('assets/scss/**/*.scss', ['styles']);
+  gulp.watch('assets/scss/**/*.scss', gulp.series('styles'));
 
   // Watch image files
-  gulp.watch('images/**/*.{png,gif,jpg}', ['images']);
+  gulp.watch('images/**/*.{png,gif,jpg}', gulp.series('images'));
 
   // Create LiveReload server
   livereload.listen();
