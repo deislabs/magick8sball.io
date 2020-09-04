@@ -30,7 +30,7 @@
     "gulp-uncss": "^1.0.6",
     "hoek": ">=4.2.1",
     "jshint": "^2.9.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "normalize-sass": "^1.0.0",
     "normalize.scss": "^0.1.0",
     "run-sequence": "^2.2.1",
